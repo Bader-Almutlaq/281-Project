@@ -24,18 +24,4 @@ public class LinkedStack<T> {
         top = top.next;
         return e;
     }
-
-    public void printStack() {
-        LinkedStack<T> temp = new LinkedStack<T>();
-
-        while (!this.empty()) {
-            T x = this.pop();
-            System.out.println(x);
-            temp.push(x);
-        }
-
-        while (!temp.empty()) {
-            this.push(temp.pop());
-        }
-    }
 }
