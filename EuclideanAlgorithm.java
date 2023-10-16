@@ -6,7 +6,7 @@ public class EuclideanAlgorithm {
             numbers = new LinkedStack<Integer>();
 
         emptyStack();
-        
+
         while (b != 0) {
             int quotient = a / b;
             int remainder = a % b;

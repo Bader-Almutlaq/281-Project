@@ -28,7 +28,7 @@ public class Main {
 
         System.out.println("s= " + arr[0] + " , t= " + arr[1]);
         System.out.println();
-        
+
         scanner.close();
     }
 }
