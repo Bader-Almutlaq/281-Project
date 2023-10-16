@@ -51,32 +51,6 @@ public class Euclidean {
         return a;
     }
 
-    public static void calculateLinearCombination(int gcd, int num1, int num2) {
-        int x0 = 1, x1 = 0, y0 = 0, y1 = 1;
-
-        System.out.println(gcd + " = " + num1 + " x " + x0 + " + " + num2 + " x " + y0);
-
-        while (gcd != 0) {
-            int quotient = num1 / gcd;
-            int remainder = num1 % gcd;
-            int x2 = x0 - quotient * x1;
-            int y2 = y0 - quotient * y1;
-
-            System.out.println(gcd + " = " + num1 + " x " + x0 + " + " + num2 + " x " + y0);
-            System.out.println(gcd + " = " + remainder + " x " + x1 + " + " + num2 + " x " + y1);
-
-            num1 = gcd;
-            gcd = remainder;
-            x0 = x1;
-            x1 = x2;
-            y0 = y1;
-            y1 = y2;
-
-        }
-
-        System.out.println("s = " + x0 + ", t = " + y0);
-    }
-
     public static int[] calculateLinearCombination(LinkedStack<Integer> numbers, int num1, int num2) {
         if (numbers.empty())
             return null;
