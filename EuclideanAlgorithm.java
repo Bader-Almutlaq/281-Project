@@ -26,8 +26,8 @@ public class EuclideanAlgorithm {
     }
 
     public static int[] calculateLinearCombination(int num1, int num2) {
-        if (numbers.empty())
-            return null;
+        if (numbers == null || numbers.empty())
+            calculateGCD(num1, num2);
 
         int arr[] = new int[2];
 
