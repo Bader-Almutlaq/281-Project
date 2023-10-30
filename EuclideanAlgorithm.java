@@ -1,21 +1,21 @@
 public class EuclideanAlgorithm {
-    private static LinkedStack<Integer> numbers; // a Stack to store the equations.
+    private static LinkedStack<Long> numbers; // a Stack to store the equations.
 
-    public static int calculateGCD(int a, int b) {
+    public static long calculateGCD(long a, long b) {
         if (numbers == null) // If the stack was not created.
-            numbers = new LinkedStack<Integer>();
+            numbers = new LinkedStack<Long>();
 
         emptyStack(); // Empty the stack from the previous operations.
 
         if (b > a) { // Swapping if the second number is bigger.
-            int temp = a;
+            long temp = a;
             a = b;
             b = temp;
         }
 
         while (b != 0) { // Going through the loop until the remainder equals zero
-            int quotient = a / b;
-            int remainder = a % b;
+            long quotient = a / b;
+            long remainder = a % b;
             System.out.println(a + " = " + quotient + " x " + b + " + " + remainder);
 
             if (remainder != 0) { // Filing the stack but not including the last equation
@@ -31,27 +31,26 @@ public class EuclideanAlgorithm {
         return a;
     }
 
-    public static int[] calculateLinearCombination(int num1, int num2) {
+    public static long[] calculateLinearCombination(long num1, long num2) {
         if (numbers == null || numbers.empty()) // If the stack is not created or empty we call calculateGCD().
             calculateGCD(num1, num2);
 
-        int arr[] = new int[2]; // Array that stores the result.
+        long arr[] = new long[2]; // Array that stores the result.
 
         // Popping the numbers in order to work backward
-        int gcd = numbers.pop(); // GCD was the last number added to the stack.
-        int y = numbers.pop();
-        int y_Coefficient = numbers.pop();
-        int x = numbers.pop();
-        int x_Coefficient = 1; // Coefficient of x is always 1 in the first equation.
+        long gcd = numbers.pop(); // GCD was the last number added to the stack.
+        long y = numbers.pop();
+        long y_Coefficient = numbers.pop();
+        long x = numbers.pop();
+        long x_Coefficient = 1; // Coefficient of x is always 1 in the first equation.
 
         System.out.println(gcd + " = " + x + " - " + y_Coefficient + " x " + y); // Printing the first equation.
 
         while (!numbers.empty()) { // Going through the loop to print the equations until the stack is empty.
-
-            int tempY = numbers.pop(); // The remainder in the equation
-            int z3 = numbers.pop(); // These numbers will substitute the remainder
-            int z2 = numbers.pop();
-            int z1 = numbers.pop();
+            long tempY = numbers.pop(); // The remainder in the equation
+            long z3 = numbers.pop(); // These numbers will substitute the remainder
+            long z2 = numbers.pop();
+            long z1 = numbers.pop();
 
             if (tempY == y) { // If the remainder is equal to y we substitute in y.
                 System.out

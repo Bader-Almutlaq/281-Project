@@ -5,15 +5,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("\nEnter the first number: ");
-        int num1 = scanner.nextInt();
+        long num1 = scanner.nextLong();
 
         System.out.print("Enter the second number: ");
-        int num2 = scanner.nextInt();
+        long num2 = scanner.nextLong();
 
         System.out.println("---------------");
 
         System.out.println("Step 1: Using Euclidean algorithm to find GCD for " + num1 + " and " + num2 + " :");
-        int gcd = EuclideanAlgorithm.calculateGCD(num1, num2);
+        long gcd = EuclideanAlgorithm.calculateGCD(num1, num2);
 
         System.out.println("---------------");
 
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("=======================================");
 
         System.out.println("Step 2: Working backwards:");
-        int arr[] = EuclideanAlgorithm.calculateLinearCombination(num1, num2);
+        long arr[] = EuclideanAlgorithm.calculateLinearCombination(num1, num2);
 
         System.out.println("---------------");
 
