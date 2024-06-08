@@ -49,13 +49,13 @@ GCD(a, b) = a * s + b * t
 ## Example
 
 ### Input
-```sh
+```
 Enter the first number: 240
 Enter the second number: 46
 ```
 
 ### Output
-```sh
+```
 ---------------
 Step 1: Using Euclidean algorithm to find GCD for 240 and 46 :
 240 = 5 x 46 + 10
