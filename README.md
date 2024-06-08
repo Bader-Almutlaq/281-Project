@@ -38,7 +38,7 @@ The Euclidean algorithm is an efficient method for computing the greatest common
 ## Extended Euclidean Algorithm
 
 The extended Euclidean algorithm not only computes the GCD of two integers `a` and `b` but also finds two integers `s` and `t` such that:
-\[ \text{GCD}(a, b) = a \cdot s + b \cdot t \]
+GCD(a, b) = a * s + b * t
 
 ### Steps
 
@@ -49,10 +49,13 @@ The extended Euclidean algorithm not only computes the GCD of two integers `a` a
 ## Example
 
 ### Input
+```sh
 Enter the first number: 240
 Enter the second number: 46
+```
 
 ### Output
+```sh
 ---------------
 Step 1: Using Euclidean algorithm to find GCD for 240 and 46 :
 240 = 5 x 46 + 10
@@ -74,5 +77,5 @@ Step 2: Working backwards:
 2 = 47 x 46 - 9 x 240
 ---------------
 s= 47 , t= -9
-
+```
 This output shows the steps taken to find the GCD using the Euclidean algorithm and then expresses the GCD as a linear combination of the input numbers.
